@@ -1,9 +1,9 @@
 {
-    "mqtt_broker": "192.168.1.200",
+    "mqtt_broker": "hostname",
     "mqtt_port": 1883,
     "mqtt_topic": "mediacenter/keylogger",
     "mqtt_username": "mqtt",
-    "mqtt_password": "ptl2271.A",
+    "mqtt_password": "mqtt_password",
     "reconnect_min_delay": 1,
     "reconnect_max_delay": 300,
     "watched_keys": [
@@ -19,6 +19,9 @@
         "right",
         "enter",
         "esc",
+        "media_stop",
+        "media_rewind",   
+        "media_fast_forward", 
         ["alt_l", "f4"]
     ]
 }
