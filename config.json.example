@@ -1,9 +1,9 @@
 {
-    "mqtt_broker": "your_mqtt_broker_address",
+    "mqtt_broker": "192.168.1.200",
     "mqtt_port": 1883,
     "mqtt_topic": "mediacenter/keylogger",
-    "mqtt_username": "your_mqtt_username",
-    "mqtt_password": "your_mqtt_password",
+    "mqtt_username": "mqtt",
+    "mqtt_password": "ptl2271.A",
     "reconnect_min_delay": 1,
     "reconnect_max_delay": 300,
     "watched_keys": [
