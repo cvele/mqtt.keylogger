@@ -36,7 +36,10 @@ for key in config.get('watched_keys', []):
         # It's a combination
         WATCHED_KEYS.add(frozenset(getattr(keyboard.Key, k) for k in key))
     else:
-        WATCHED_KEYS.add(getattr(keyboard.Key, key))
+        if hasattr(keyboard.Key, key):
+            WATCHED_KEYS.add(getattr(keyboard.Key, key))
+        else:
+            WATCHED_KEYS.add(keyboard.KeyCode.from_char(key))
 
 async def mqtt_connect():
     global client
@@ -68,6 +71,7 @@ async def publish_key(key_str):
         logging.error(f"Failed to publish: {e}")
 
 def on_press(key):
+    print(f"Key pressed: {key}")
     global pressed_keys
     pressed_keys.add(key)
 

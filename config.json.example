@@ -19,9 +19,6 @@
         "right",
         "enter",
         "esc",
-        "media_stop",
-        "media_rewind",   
-        "media_fast_forward", 
         ["alt_l", "f4"]
     ]
 }
